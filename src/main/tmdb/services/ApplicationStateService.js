@@ -32,12 +32,20 @@ define( [ 'angular',
                 media:  {} 
             };
 
+            self.visitedMovies=[];
+            self.idsMovies=[];  
+
             /**
              * Interprets media.select event when a specific media entity is clicked on in search results or popular items
              * Accepts two parameters: the media type and the definition itself.
              **/
             $rootScope.$on( 'media.select', function( $event, mediaType, mediaDefinition ) {
             } );
+
+            $rootScope.$on('selected.movie', function($event, data){
+
+                self.visitedMovies; 
+            });
         };
 
         ApplicationStateService.$inject = [ '$rootScope', 'localStorageService' ];
